@@ -1,7 +1,11 @@
-// import { Equipment } from '../../app/types/Equipment';
 "use client"
+// import { Equipment } from '../../app/types/Equipment';
+import { z } from "zod";
+
 
 export default function MaintenanceForm() {
+
+
 
     return (
         <form className="border rounded-sm border-red">
