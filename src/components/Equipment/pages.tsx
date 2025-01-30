@@ -1,7 +1,19 @@
-// import { Equipment } from '../../app/types/Equipment';
 "use client"
+import { equimentSchema } from '../../app/types/Equipment';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 
-export default function EquipmentForm() {
+
+
+const EquipmentForm = ({ onSubmit } : { onSubmit: ( data: Equipment ) => void }) => {
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm<Equipment>({
+        resolver: zodResolver(equimentSchema),
+    })
 
     return (
         <form >
